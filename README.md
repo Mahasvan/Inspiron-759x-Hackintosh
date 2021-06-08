@@ -15,14 +15,18 @@ With that said, let's get on with what each SSDT and Kext does
 ![List of SSDTs needed](https://user-images.githubusercontent.com/82939599/121011440-3d373100-c7b4-11eb-8ec6-759913df5aba.png)
 
 The SSDTs mentioned in this screenshot are prebuilt. These are all the SSDTs you need to boot into the macOS installer.
+Note that you don't see SSDT-XOSI in your ACPI folder because I have replaced it with SSDT-GPIO. I cannot guarantee it will work, so it is better to use SSDT-XOSI along with the ACPI rename, as the guide says.
 
 ### Kexts
 
 The kexts mentioned in the dortania guide are all that are needed to boot. However, there are some kexts that offer extra features. These are recommended for post-install.
+Note: You might also need CpuTscSync if your booting process gets stuck. (I need it, so I included it in the kexts folder)
 
 CPUFriend: Facilitates proper CPU Power management. Needs another kext CPUFriendDataProvider, which we can make ourselves by following the post install guide.
 
 NoTouchID.kext: Fingerprint sensors in Inspiron Laptops have no way of working in macOS. So we use this kext
+
+BrightnessKeys.kext Facilitates automatic handling of brightness keys without acpi modification
 
 VirtualSMC Plugins:
  - SMCProcessor
