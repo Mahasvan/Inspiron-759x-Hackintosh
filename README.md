@@ -22,7 +22,7 @@ With that said, let's get on with what each SSDT and Kext does
 ![List of SSDTs needed](https://user-images.githubusercontent.com/82939599/121011440-3d373100-c7b4-11eb-8ec6-759913df5aba.png)
 
 The SSDTs mentioned in this screenshot are prebuilt. These are all the SSDTs you need to boot into the macOS installer.
-Note that you don't see SSDT-XOSI in your ACPI folder because I have replaced it with SSDT-GPIO. I cannot guarantee it will work, so it is better to use SSDT-XOSI along with the ACPI rename, as the guide says.
+Note that you don't see SSDT-XOSI in my ACPI folder because I have replaced it with SSDT-GPIO. I cannot guarantee it will work, so it is better to use SSDT-XOSI along with the ACPI rename, as the guide says.
 
 ### Kexts
 
