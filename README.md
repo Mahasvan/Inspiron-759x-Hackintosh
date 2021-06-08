@@ -2,6 +2,12 @@
 This repository is for people who want macOS on their Inspiron 759x laptops.
 
 
+### Specs:
+ - Intel Core i7 9750H
+ - 16GB DDR4 2666Mhz
+ - GTX 1050 (disabled via SSDT)
+ - Intel AC9560 Wifi+BT
+
 ## Note: This repo is ONLY FOR REFERENCE
 
 DO NOT use this EFI as it is. It probably won't boot, and I am not responsible for any damage that occurs.
