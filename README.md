@@ -38,6 +38,11 @@ VoodooI2C + VoodooI2cHID: Needed for trackpad functioning.
 
 Sinetek-rtsx.kext: Used for enabling the fingerprint sensor. Note that this may not work on your machine, and should be used with caution.
 
+#### Screenshots
+![Uploading Screen Shot 2021-03-27 at 10.25.30 PM.png…]()
+![geekbench mac](https://user-images.githubusercontent.com/82939599/121173170-1b9e7e00-c876-11eb-8299-c8b661b73176.png)
+
+
 #### Troubleshooting
 
 Even though you followed the Dortania guide correctly, there are bound to be errors. There is a Hackintosh community just for this purpose. 
