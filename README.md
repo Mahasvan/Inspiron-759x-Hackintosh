@@ -1,5 +1,6 @@
 # Inspiron-759x-Hackintosh
 This repository is for people who want macOS on their Inspiron 759x laptops.
+In this repo, I am only using OpenCore as Clover is basically a frankenstein bootloader these days
 
 
 ### Specs:
