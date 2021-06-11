@@ -54,7 +54,6 @@ Sinetek-rtsx.kext: Used for enabling the fingerprint sensor. Note that this may 
 
 #### Troubleshooting
 
-Even though you followed the Dortania guide correctly, there are bound to be errors. There is a Hackintosh community just for this purpose. 
-
+Even though you followed the Dortania guide correctly, there are bound to be errors. There is a Hackintosh community, where you can discuss and solve problems.
 r/Hackintosh discord server: https://discord.gg/u8V7N5C
 r/Hackintosh Subreddit: https://www.reddit.com/r/hackintosh/
