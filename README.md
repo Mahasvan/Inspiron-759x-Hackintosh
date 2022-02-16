@@ -1,6 +1,5 @@
 # Inspiron-759x-Hackintosh
 This repository is for people who want macOS on their Inspiron 759x laptops.
-In this repo, I am only using OpenCore, as Clover is basically a frankenstein bootloader these days
 
 ![screenshot](./images/screenshot.png)
 
@@ -14,24 +13,11 @@ In this repo, I am only using OpenCore, as Clover is basically a frankenstein bo
 
 
 ## Note: The files in the source code are ONLY FOR REFERENCE
-Download the release ZIP and modify the required fields in the `config.plist` before using this in your machine.
+Modify the required fields in the `config.plist` before using this in your machine. (Or better, just don't use my EFI. Simple)
 
 Follow Dortania's [Opencore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) to make your EFI. (Highly recomended)
 
-With that said, let's get on with what each SSDT and Kext does
-
-### SSDTs
-
-| SSDT | Function |
-| ---- | -------- |
-| SSDT-PLUG | Used for enabling Apple's XCPM in macOS, allowing for far better CPU power management |
-| SSDT-EC-USBX | Used for disabling your real Embedded controller and creating a fake one for macOS to play with ; USBX portion is used for injection USB power properties missing on Skylake and newer
-| SSDT-AWAC | Used to enable the legacy RTC clock in macOS, as the newer AWAC clock is unsupported |
-| SSDT-PMC | Used to enable native NVRAM on "true" 300 series motherboards |
-| SSDT-PNLF-CFL | Used for controlling the backlight on internal displays |
-| SSDT-XOSI | Enables many Windows-only functionality in macOS - Requires XOSI patch in `ACPI > Patch`|
-
-I use Pre-built SSDTs in this repo because it has broader compatibility. These are all the SSDTs you need to boot into the macOS installer.
+With that said, here's my EFI folder anyway.
 
 ### Kexts
 
@@ -61,7 +47,7 @@ Sinetek-rtsx.kext: Used for enabling the SD card reader. Note that this may or m
 
 ### Troubleshooting
 
-Even though you followed the Dortania guide correctly, there are bound to be errors. There is a Hackintosh community, where you can discuss and solve problems.
+Even though you followed the Dortania guide correctly, there are bound to be errors. There's the Hackintosh community, where you can discuss and solve problems.
 r/Hackintosh discord server: https://discord.gg/u8V7N5C
 r/Hackintosh Subreddit: https://www.reddit.com/r/hackintosh/
 
