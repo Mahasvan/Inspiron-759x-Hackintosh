@@ -42,7 +42,6 @@ VirtualSMC Plugins:
 
 VoodooI2C + VoodooI2cHID: Needed for proper trackpad functioning. 
 
-Sinetek-rtsx.kext: Used for enabling the SD card reader. Note that this may or may not not work on your machine.
 
 ### Benchmarks
 ![geekbench score](./images/geekbench.png)
