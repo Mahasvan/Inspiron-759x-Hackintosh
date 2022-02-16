@@ -1,7 +1,10 @@
 # Inspiron-759x-Hackintosh
 This repository is for people who want macOS on their Inspiron 759x laptops.
 
+## Current OpenCore version on this EFI: 0.7.9 (Compiled from source)
+
 ![screenshot](./images/screenshot.png)
+
 
 ### Specs:
 | Part          | Name      |
