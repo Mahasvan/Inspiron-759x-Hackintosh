@@ -1,26 +1,75 @@
 # Inspiron-759x-Hackintosh
 This repository is for people who want macOS on their Inspiron 759x laptops.
 
-## Current OpenCore version on this EFI: 0.7.9 (Compiled from source)
+## Current OpenCore version on this EFI: 0.8.0 (Compiled from source)
 
 ![screenshot](./images/screenshot.png)
 
 
-### Specs:
-| Part          | Name      |
-|---------------|-----------|
-| CPU | Intel Core i7 9750H |
-| RAM | 16GB DDR4 2666Mhz   |
-| Graphics | GTX 1050 (disabled via SSDT) + UHD630 |
-| Connectivity |Intel AC9560 Wifi+BT |
+## Specs:
+| Part         | Name                                  |
+|--------------|---------------------------------------|
+| CPU          | Intel Core i7 9750H                   |
+| RAM          | 16GB DDR4 2666Mhz                     |
+| Graphics     | GTX 1050 (disabled via SSDT) + UHD630 |
+| Connectivity | Intel AC9560 Wifi+BT                  |
 
+## What works
+- Graphics Acceleration
+- Wi-fi and Bluetooth
+- Fan Control
+- CPU Power Management
+- USB Ports
+- Sleep
+
+## What doesn't work
+- Fingerprint
+- HDMI (not tested, though it will probably work with the right patches)
+- Thunderbolt (not tested)
+- Hibernate (not tested)
 
 ## Note: The files in the source code are ONLY FOR REFERENCE
 Modify the required fields in the `config.plist` before using this in your machine. (Or better, just don't use my EFI. Simple)
 
 Follow Dortania's [Opencore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) to make your EFI. (Highly recomended)
 
-With that said, here's my EFI folder anyway.
+With that said, my EFI folder is in the source code anyway.
+
+## What to change
+
+### Config entries
+
+- DeviceProperties
+    - Add
+        - PciRoot(0x0)/Pci(0x1F,0x3)
+            - layout-id
+        - PciRoot(0x0)/Pci(0x2,0x0)
+            - Framebuffer patches if needed (explained in the Dortania guide)
+
+- Misc
+    - Debug
+        - AppleDebug
+        - ApplePanic
+        - Target
+
+- NVRAM
+    - Add
+        - 7C436110-AB2A-4BBB-A880-FE41995C9F82
+            - boot-args
+
+- PlatformInfo
+    - Generic
+        - MLB
+        - ROM
+        - SystemSerialNumber
+        - SystemUUID
+
+### Misc changes
+- You might need to remove TscAdjustReset.kext depending on whether you're running Monterey or not. You don't need TscAdjustReset unless running Monterey.
+- In the `info.plist` of TscAdjustReset.kext, change the `IOCpuNumber` to the number of CPU thread you have minus 1. For example, I have entered `11` since I have 12 threads in my CPU.
+- Probably will need to redo the USB Mapping (instructions in the Dortania's OpenCore Post Install Guide)
+
+This is just a rough overview, is not necessarily complete, and I am absolutely not responsible for anything that may happen to your machine or your sanity.
 
 ### Kexts
 
@@ -30,7 +79,7 @@ The kexts mentioned in the dortania guide are all that are needed to boot. Howev
 
 CPUFriend: Facilitates proper Power management for the CPU. Needs another kext `CPUFriendDataProvider`, which we can make ourselves by following the post install guide. I have included this kext which was made for my machine, according to my requirements.
 
-NoTouchID.kext: Fingerprint sensors in Hackintoshes have no way of working in macOS. So we use this kext.
+NoTouchID.kext: Fingerprint sensors in Hackintoshes have no way of working in macOS. So we use this kext. (Apprently is not needed in Big Sur 11.3+, but I haven't tried to confirm this)
 
 BrightnessKeys.kext: Facilitates automatic handling of brightness keys without acpi modification.
 
