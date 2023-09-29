@@ -109,7 +109,7 @@ You can rename your integrated graphics card by making an entry called `model` i
 
 ![rename igpu](./images/rename_igpu.png)
 
-#### Getting a smoother UI by faking a 1080p display as 1080p HiDPI
+#### Getting a visually more polished UI by faking a 1080p display as 1080p HiDPI
 
 Download [RDM](https://github.com/usr-sse2/RDM) and follow the instructions below
 
