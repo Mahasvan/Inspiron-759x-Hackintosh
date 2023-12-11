@@ -1,7 +1,7 @@
 # Inspiron-759x-Hackintosh
 This repository is for people who want macOS on their Inspiron 759x laptops.
 
-## Current OpenCore version on this EFI: 0.8.0 (Compiled from source)
+## Current OpenCore version on this EFI: 0.9.5
 
 ![screenshot](./images/screenshot.png)
 
@@ -29,11 +29,11 @@ This repository is for people who want macOS on their Inspiron 759x laptops.
 - Hibernate (not tested)
 
 ## Note: The files in the source code are ONLY FOR REFERENCE
-Modify the required fields in the `config.plist` before using this in your machine. (Or better, just don't use my EFI. Simple)
+Modify the required fields in the `config.plist` before using this in your machine. (Or better, just don't use my EFI. Just make your own tbh)
 
-Follow Dortania's [Opencore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) to make your EFI. (Highly recomended)
+Follow Dortania's [Opencore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/) to make your EFI. (Highly recommended)
 
-With that said, my EFI folder is in the source code anyway.
+With that said, my EFI folder is uploaded anyway.
 
 ## What to change
 
