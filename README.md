@@ -19,14 +19,20 @@ This repository is for people who want macOS on their Inspiron 759x laptops.
 - Wi-fi and Bluetooth
 - Fan Control
 - CPU Power Management
-- USB Ports
+- USB Ports (may need remapping depending on device)
 - Sleep
+- Camera
+- Battery Reading
+- Brightness Control
+- SD Card Reader
+- Audio Output
 
 ## What doesn't work
 - Fingerprint
 - HDMI (not tested, though it will probably work with the right patches)
 - Thunderbolt (not tested)
 - Hibernate (not tested)
+- Internal mic (will never work)
 
 ## Note: The files in the source code are ONLY FOR REFERENCE
 Modify the required fields in the `config.plist` before using this in your machine. (Or better, just don't use my EFI. Just make your own tbh)
